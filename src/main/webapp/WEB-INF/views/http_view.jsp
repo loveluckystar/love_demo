@@ -25,7 +25,7 @@
 <body>
 	<div class="container">
 
-      <form class="form-signin" action="httpsubmit.action" method="post">
+      <form class="form-signin" action="/sp/httpsubmit.action" method="post">
         <h2 class="form-signin-heading">SP后台登陆</h2>
         <label for="httpurl" class="sr-only">url地址</label>
         <input type="text" id="httpurl" name="httpurl"   class="form-control" placeholder="url地址" required autofocus>
