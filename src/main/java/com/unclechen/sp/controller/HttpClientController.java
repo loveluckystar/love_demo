@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 public class HttpClientController {
 	private static Logger log = Logger.getLogger(HttpClientController.class);
 
-	@RequestMapping("http_view.action")
+	@RequestMapping("httpview.action")
 	public String http_view(HttpServletRequest request, HttpServletResponse response) {
 		String httpurl=request.getParameter("httpurl");
 		log.info("httpurl:"+httpurl);
@@ -23,7 +23,7 @@ public class HttpClientController {
 	}
 
 
-	@RequestMapping("http_submit.action")
+	@RequestMapping("httpsubmit.action")
 	public String http_submit(HttpServletRequest request, HttpServletResponse response) {
 		String httpurl=request.getParameter("httpurl");
 		String result = HttpClientUtil.getInstance().sendHttpGet(httpurl);
