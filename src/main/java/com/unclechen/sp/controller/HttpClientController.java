@@ -44,6 +44,9 @@ public class HttpClientController {
 
 	@RequestMapping("httpcall.action")
 	public void http_call(HttpServletRequest request, HttpServletResponse response) throws IOException, GeneralSecurityException {
+//		String cloud-141309
+		String project_id = request.getParameter("proid");
+//				"cloud-141309";
 		// Authentication is provided by the 'gcloud' tool when running locally
 		// and by built-in service accounts when running on GAE, GCE, or GKE.
 		GoogleCredential credential = GoogleCredential.getApplicationDefault();
@@ -64,7 +67,7 @@ public class HttpClientController {
 
 		// TODO: Change placeholders below to appropriate parameter values for the 'create' method:
 		// The project on which to execute the request. The format is `"projects/{project_id_or_number}"`.
-		String name = "projects/1";
+		String name = "projects/"+project_id;
 
 		CreateTimeSeriesRequest content = new CreateTimeSeriesRequest();
 		// TODO: Add code here to assign values to desired fields of the 'content' object
